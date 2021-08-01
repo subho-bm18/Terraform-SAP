@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 0.11.0"
+  required_version = ">= 0.12.0"
 }
 
 provider "aws" {
@@ -12,6 +12,6 @@ resource "aws_instance" "ubuntu" {
   availability_zone = "${var.aws_region}a"
 
   tags {
-    Name = "${var.name}"
+    Name = "Provisioned by Terraform"
   }
 }
